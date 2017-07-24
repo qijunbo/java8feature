@@ -1,0 +1,9 @@
+ <com.i8m.weixin.service.notify.MsgResponse>
+  <toUserName>qijunbo</toUserName>
+  <fromUserName>wx3e96664c63b5f8e7</fromUserName>
+  <createTime>1469854525259</createTime>
+  <msgType>text</msgType>
+  <content>vmstatus</content>
+  <msgId>1469854525259</msgId>
+  <agentID>1</agentID>
+</com.i8m.weixin.service.notify.MsgResponse>
