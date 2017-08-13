@@ -21,5 +21,8 @@ public class ParallelArraysDemo {
 		System.out.println("time taken: " + (System.currentTimeMillis() - time) + "ºÁÃë");
 		Arrays.stream(arrayOfLong).limit(10).forEach(i -> System.out.print(i + " "));
 		System.out.println();
+		
+	
+		
 	}
 }

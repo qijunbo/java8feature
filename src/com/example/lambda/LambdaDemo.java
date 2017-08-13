@@ -25,10 +25,11 @@ public class LambdaDemo {
 		}
 
 	}
-	
+
 	/**
-	 * 遍历list里面的每一个元素， 如果元素满足predicte指定的条件， 那么就用consumer消费这个元素。
-	 * consumer 允许你把一个"无参数函数"当成一个参数传给一个方法。
+	 * 遍历list里面的每一个元素， 如果元素满足predicte指定的条件， 那么就用consumer消费这个元素。 consumer
+	 * 允许你把一个"无返回值函数"当成一个参数传给一个方法。
+	 * 
 	 * @param list
 	 * @param predicate
 	 * @param consumer
@@ -43,21 +44,24 @@ public class LambdaDemo {
 		}
 
 	}
+
 	/**
-	 * 遍历list里面的每一个元素， 如果元素满足predicte指定的条件， 那么就用consumer消费这个元素。
-	 * consumer 允许你把一个"有参数函数"当成一个参数传给一个方法。
+	 * 遍历list里面的每一个元素， 如果元素满足predicte指定的条件， 那么就用consumer消费这个元素。 consumer
+	 * 允许你把一个"有返回值函数"当成一个参数传给一个方法。
+	 * 
 	 * @param list
 	 * @param predicate
 	 * @param consumer
 	 */
 	public static void printCollection(List<Integer> list, Predicate<Integer> predicate, Consumer<String> consumer,
 			Function<Integer, String> action) {
-
-		for (Integer num : list) {
-			if (predicate.test(num)) {
-				consumer.accept(action.apply(num));
+		list.forEach(a -> {
+			if (predicate.test(a)) {
+				consumer.accept(action.apply(a));
 			}
-		}
+		});
+
+ 
 
 	}
 
