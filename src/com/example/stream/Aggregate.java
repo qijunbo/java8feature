@@ -25,13 +25,13 @@ public class Aggregate {
 
 		Stream.generate(Math::random);
 
-		// ÓÃËæ»úÊı·¢ÉúÆ÷Éú³ÉÒ»¸östream
+		// ç”¨éšæœºæ•°å‘ç”Ÿå™¨ç”Ÿæˆä¸€ä¸ªstream
 		Stream.generate(() -> Integer.valueOf((int) (Math.random() * 100000)))
-				// ÏŞÖÆsteamµÄ³¤¶È£¬²»È»¾ÍËÀÑ­»·£¬ÓÀÔ¶Í£²»ÏÂÀ´ÁË¡£
+				// é™åˆ¶steamçš„é•¿åº¦ï¼Œä¸ç„¶å°±æ­»å¾ªç¯ï¼Œæ°¸è¿œåœä¸ä¸‹æ¥äº†ã€‚
 				.limit(100)
-				// Ìí¼Ó¹ıÂËÌõ¼ş¡£
+				// æ·»åŠ è¿‡æ»¤æ¡ä»¶ã€‚
 				.filter(c -> c % 2 == 0)
-				// Ìí¼Ó¶ÔÔªËØµÄ¶¯×÷¡£
+				// æ·»åŠ å¯¹å…ƒç´ çš„åŠ¨ä½œã€‚
 				.forEach(num -> System.out.println(num));
 	}
 }
