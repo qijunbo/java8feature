@@ -12,13 +12,13 @@ public class ParallelArraysDemo {
 		long[] arrayOfLong = new long[20000];
 
 		Arrays.parallelSetAll(arrayOfLong, index -> ThreadLocalRandom.current().nextInt(1000000));
-		System.out.println("time taken: " + (System.currentTimeMillis() - time) + "ºÁÃë");
+		System.out.println("time taken: " + (System.currentTimeMillis() - time) + "æ¯«ç§’");
 		time =  System.currentTimeMillis();
 		Arrays.stream(arrayOfLong).limit(10).forEach(i -> System.out.print(i + " "));
 		System.out.println();
 
 		Arrays.parallelSort(arrayOfLong);
-		System.out.println("time taken: " + (System.currentTimeMillis() - time) + "ºÁÃë");
+		System.out.println("time taken: " + (System.currentTimeMillis() - time) + "æ¯«ç§’");
 		Arrays.stream(arrayOfLong).limit(10).forEach(i -> System.out.print(i + " "));
 		System.out.println();
 		
